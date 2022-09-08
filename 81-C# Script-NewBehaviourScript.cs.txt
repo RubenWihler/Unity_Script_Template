@@ -1,0 +1,98 @@
+// <copyright file="#SCRIPTNAME#.cs" company="your company">
+// yourProjectName Copyright (c) 2020 All Rights Reserved
+// </copyright>
+// <author>author name</author>
+// <date>00/00/2022</date>
+// <summary>Class Desctiption</summary>
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+//using UnityEngine.UI;
+//using System.Linq;
+
+
+public class #SCRIPTNAME# : MonoBehaviour
+{
+    /*---------- Unity Fields ----------*/
+    [Header("Object Reference")]
+    [SerializeField]
+    private GameObject gm_temporary;
+
+    /*---------- Fields ----------*/
+    private string str_temporary;
+
+    private static #SCRIPTNAME# _instance;
+
+    #region /*------------- Proprety --------------*/
+
+    public static #SCRIPTNAME# Instance 
+    { 
+        get
+	{
+            return _instance;
+	}
+    }
+
+    #endregion
+    
+    #region /*----------- Unity Methods -----------*/
+
+    private void Awake()
+    {
+        _instance = this;
+    }
+
+    private void Start()
+    {
+        Init();
+    }
+
+    private void OnDestroy()
+    {
+        Destruct();
+    }
+
+    #endregion
+
+    #region /*---------- Initialization -----------*/
+
+    private void Init()
+    {
+        Init_Event();
+    }
+
+    private void Init_Event()
+    {
+        
+    }
+
+    #endregion
+
+    #region /*------------- Destruct --------------*/
+
+    private void Destruct()
+    {
+        UnlinkEvent();
+    }
+    private void UnlinkEvent()
+    {
+        
+    }
+
+    #endregion
+
+    #region /*---------- Private Methods ----------*/
+
+
+
+    #endregion
+
+    #region /*---------- Public Methods -----------*/
+
+
+
+    #endregion
+}
